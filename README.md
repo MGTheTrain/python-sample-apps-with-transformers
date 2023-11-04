@@ -9,7 +9,7 @@
 
 ## Summary
 
-
+Sample apps utilizing the transformers pip package.
 
 ## References
 
