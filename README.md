@@ -9,7 +9,7 @@
 
 ## Summary
 
-Sample apps utilizing the transformers pip package.
+Sample apps utilizing the transformers pip package and trained transformer models.
 
 ## References
 
