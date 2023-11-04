@@ -2,9 +2,9 @@ import tensorflow as tf
 from transformers import TFGPT2LMHeadModel, GPT2Tokenizer
 
 # Load pre-trained GPT-2 model and tokenizer
-# model_name = "gpt2" # small transformer model - less accuracy - requires less hardware resources
-model_name = "gpt2-large" # medium transformer model - more accuracy - requires more hardware resources
-# model_name = "gpt2-x1" # large transformer model - even more accuracy - requires even more hardware resources
+# model_name = "gpt2" # medium transformer model - less accuracy - requires less hardware resources
+model_name = "gpt2-large" # large transformer model - more accuracy - requires more hardware resources
+# model_name = "gpt2-x1" # very large transformer model - even more accuracy - requires even more hardware resources
 model = TFGPT2LMHeadModel.from_pretrained(model_name)
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 
