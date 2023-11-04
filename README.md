@@ -17,15 +17,20 @@ Sample apps utilizing the transformers pip package.
 
 ## How to use
 
+Build the docker image:
+
+```sh
+docker build -t python-sample-with-transformers:stable .
+```
 Execute the following to run a sample app trough a docker container:
 
 ```sh
-# Build the docker image
-docker build -t python-sample-with-transformers:stable .
 # Run in a docker container an app utilizing the huggface transofmer model trained for english to french translation tasks
 docker run --rm -it python-sample-with-transformers:stable bash -c "python3 samples/en-to-fr-translator.py"
 # Run in a docker container an app utilizing the huggface transofmer model trained for english to german translation tasks
 docker run --rm -it python-sample-with-transformers:stable bash -c "python3 samples/en-to-de-translator.py"
+# Run in a docker container an app utilizing the huggface transofmer model trained for english to chinese translation tasks
+docker run --rm -it python-sample-with-transformers:stable bash -c "python3 samples/en-to-zh-translator.py"
 ```
 
 In order to clear docker resources:
