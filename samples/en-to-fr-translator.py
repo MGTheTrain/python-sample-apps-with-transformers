@@ -1,20 +1,17 @@
 import tensorflow as tf
-import tensorflow_text
-import transformers
-import sentencepiece
-import numpy as np
+from transformers import MarianTokenizer, TFAutoModelForSeq2SeqLM
 
-# Load the MarianMT model and SentencePiece tokenizer for translation (e.g., English to French)
+# Load the pre-trained model and tokenizer for translation (e.g., English to French)
 model_name = "Helsinki-NLP/opus-mt-en-fr"
-model = transformers.TFAutoModelForTranslation.from_pretrained(model_name)
-tokenizer = transformers.AutoTokenizer.from_pretrained(model_name)
+tokenizer = MarianTokenizer.from_pretrained(model_name)
+model = TFAutoModelForSeq2SeqLM.from_pretrained(model_name)
 
 def translate_text(input_text, source_lang="en", target_lang="fr"):
     input_text = input_text.lower()  # Preprocess text if needed
-    input_ids = tokenizer.encode(input_text, return_tensors="tf", padding=True)
-    translation = model.generate(input_ids, max_length=100, decoder_start_token_id=tokenizer.pad_token_id)
-    translation_text = tokenizer.decode(translation[0], skip_special_tokens=True)
-    return translation_text
+    inputs = tokenizer.encode(input_text, return_tensors="pt", padding=True, max_length=512, truncation=True)
+    translated = model.generate(inputs, max_length=100, num_return_sequences=1)
+    translation = tokenizer.batch_decode(translated, skip_special_tokens=True)
+    return translation[0]
 
 if __name__ == "__main__":
     while True:
