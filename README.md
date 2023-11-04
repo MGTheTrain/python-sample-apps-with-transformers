@@ -32,7 +32,7 @@ docker run --rm -it python-sample-with-transformers:stable bash -c "python3 samp
 # Run in a docker container an app utilizing a huggface transofmer model trained for english to chinese translation tasks
 docker run --rm -it python-sample-with-transformers:stable bash -c "python3 samples/en-to-zh-translator.py"
 # Run in a docker container a chatbot app which utilizes the GPT2 transformer model
-docker run --rm -it python-sample-with-transformers:stable bash -c "python3 samples/chatbot.py"
+docker run --rm -it python-sample-with-transformers:stable bash -c "python3 samples/chatbot.py --model_name <gpt2, gpt-large, gp2-x1>"
 ```
 
 In order to clear docker resources:
