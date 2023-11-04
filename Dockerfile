@@ -5,6 +5,8 @@ RUN apt-get update && \
     apt auto-remove -y
 
 WORKDIR /app
-COPY . .
+COPY requirements.txt .
 
 RUN /bin/sh -c "pip install -r requirements.txt"
+
+COPY . .
