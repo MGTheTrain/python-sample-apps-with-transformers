@@ -17,13 +17,20 @@ Sample apps utilizing the transformers pip package.
 
 ## How to use
 
-Execute the following:
+Execute the following to run a sample app trough a docker container:
 
 ```sh
 # Build the docker image
 docker build -t python-sample-with-transformers:stable .
 # Run a container
 docker run --rm -it python-sample-with-transformers:stable bash -c "python3 samples/en-to-fr-translator.py"
+```
+
+In order to clear docker resources:
+
+````sh
+docker rm -f $(docker ps -qa)
+docker system prune --volumes --force
 # In order to remove dangling images (e.g. `ERROR: Could not install packages due to an EnvironmentError: [Errno 28] No space` could appear on Windows OS for example)
 docker image prune
 ```
