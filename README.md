@@ -37,7 +37,7 @@ docker run --rm -it python-sample-with-transformers:stable bash -c "python3 samp
 
 In order to clear docker resources:
 
-````sh
+```sh
 docker rm -f $(docker ps -qa)
 docker system prune --volumes --force
 # In order to remove dangling images (e.g. `ERROR: Could not install packages due to an EnvironmentError: [Errno 28] No space` could appear on Windows OS for example)
