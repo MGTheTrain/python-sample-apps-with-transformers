@@ -24,6 +24,6 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Simple GPT-2 Chatbot")
-    parser.add_argument("--model_name", type=str, default="gpt2", help="Pre-trained model name (e.g., gpt2, gpt2-medium, gpt2-large, etc.)")
+    parser.add_argument("--model_name", type=str, default="gpt2", help="Pre-trained model name (e.g. gpt2, gpt2-medium, gpt2-large, etc.)")
     args = parser.parse_args()
     main(args)
