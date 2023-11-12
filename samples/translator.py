@@ -24,7 +24,7 @@ def translate_text(input_text, model, tokenizer):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Simple Transformer Translator")
-    parser.add_argument("--source_lang", type=str, default="en", help="Source language code (e.g., 'en' for English)")
-    parser.add_argument("--target_lang", type=str, default="fr", help="Target language code (e.g., 'fr' for French)")
+    parser.add_argument("--source_lang", type=str, default="en", help="Source language code (e.g. 'en' for English)")
+    parser.add_argument("--target_lang", type=str, default="fr", help="Target language code (e.g. 'fr' for French)")
     args = parser.parse_args()
     main(args)
