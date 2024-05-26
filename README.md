@@ -4,11 +4,16 @@
 ## Table of Contents
 
 - [Summary](#summary)
+- [References](#references)
 - [Getting started](#how-to-use)
 
 ## Summary
 
 Sample TensorFlow and PyTorch apps utilizing the `transformers` pip package and trained transformer models.
+
+## References
+
+- [IBM granite-code-models Github repository](https://github.com/ibm-granite/granite-code-models?tab=readme-ov-file#inference)
 
 ## Getting started
 
