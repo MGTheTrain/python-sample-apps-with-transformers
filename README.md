@@ -5,7 +5,7 @@
 
 - [Summary](#summary)
 - [References](#references)
-- [Getting started](#how-to-use)
+- [Getting started](#getting-started)
 
 ## Summary
 
