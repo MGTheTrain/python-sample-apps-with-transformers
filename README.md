@@ -41,7 +41,10 @@ docker run --rm -it python-sample-with-transformers-and-tf:stable bash -c "pytho
 
 **Option A - Preferred:**
 
+Install pip dependencies and run PyTorch sample app:
+
 ```sh
+pip install -r requirements.pt.txt
 python3 samples/granite-chatbot.py --model_name <ibm-granite/granite-3b-code-base, ibm-granite/granite-3b-code-instruct, ibm-granite/granite-8b-code-base, ibm-granite/granite-8b-code-instruct, ibm-granite/granite-20b-code-base, ibm-granite/granite-20b-code-instruct, ibm-granite/granite-34b-code-base, ibm-granite/granite-34b-code-instruct> --device <cuda, cpu>
 ```
 
