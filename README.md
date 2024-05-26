@@ -34,13 +34,13 @@ docker run --rm -it python-sample-with-transformers-and-tf:stable bash -c "pytho
 
 ### Pytorch apps
 
-**Optioan A - Preferred:**
+**Option A - Preferred:**
 
 ```sh
 python3 samples/granite-chatbot.py --model_name <ibm-granite/granite-3b-code-base, ibm-granite/granite-3b-code-instruct, ibm-granite/granite-8b-code-base, ibm-granite/granite-8b-code-instruct, ibm-granite/granite-20b-code-base, ibm-granite/granite-20b-code-instruct, ibm-granite/granite-34b-code-base, ibm-granite/granite-34b-code-instruct> --device <cuda, cpu>
 ```
 
-**Optioan B - Optional and process might be terminated due to insufficient memory:** 
+**Option B - Optional and process might be terminated due to insufficient memory:** 
 
 Build the docker image installing the torch pip package:
 
