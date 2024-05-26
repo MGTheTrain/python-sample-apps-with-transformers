@@ -52,7 +52,7 @@ Execute the following to run a PyTorch sample app trough a docker container:
 ```sh
 # Run in a docker container a granite chat bot app which utilizes a ibm-granite/granite-3b-code-base transformer model
 # NOTE: 
-# - Downloading pre-trained model files (weights, etc.) takes quite a long time and only CPU hardware is considered (no GPU support in the Docker container)
+# - Downloading pre-trained model files (weights, etc.) takes quite a long time and only CPU hardware is considered (no GPU mounting in Docker container considered)
 # - Process might be terminated due to insufficient memory
 docker run --rm -it python-sample-with-transformers-and-pt:stable bash -c "python3 samples/granite-chatbot.py --model_name <ibm-granite/granite-3b-code-base, ibm-granite/granite-3b-code-instruct, ibm-granite/granite-8b-code-base, ibm-granite/granite-8b-code-instruct, ibm-granite/granite-20b-code-base, ibm-granite/granite-20b-code-instruct, ibm-granite/granite-34b-code-base, ibm-granite/granite-34b-code-instruct>"
 ```
