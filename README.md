@@ -19,7 +19,7 @@ Sample TensorFlow and PyTorch apps utilizing the `transformers` pip package and 
 
 ### Tensorflow apps
 
-Build the docker image installing the tensorflow pip package:
+Build the docker image:
 
 ```sh
 docker build -t python-sample-with-transformers-and-tf:stable -f TensorFlow.Dockerfile .
@@ -47,7 +47,7 @@ python3 samples/granite-chatbot.py --model_name <ibm-granite/granite-3b-code-bas
 
 **Option B - Optional and process might be terminated due to insufficient memory:** 
 
-Build the docker image installing the torch pip package:
+Build the docker image:
 
 ```sh
 docker build -t python-sample-with-transformers-and-pt:stable -f PyTorch.Dockerfile .
